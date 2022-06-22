@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} General Mode {% endblock %}
+{% block head %}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Javascript Project - To Do list</title>
+<!-- using font awesome for icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+  crossorigin="anonymous">
+<!-- using google font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+<!-- importing reset and main css -->
+<link rel="stylesheet" href="static/css/resset.css">
+<link rel="stylesheet" href="static/css/maiin.css">
+
+<style>
+    h1 {text-align: center;}
+    div.b {
+  position: absolute;
+  right: 610px;
+}
+</style>
+{% endblock%}
+
+{% block content %} 
+
+<div class="container">
+    <h1 style="font-size:30px">Welcome back! <br> Hospital-1</h1>
+    <div class="todoBlock">
+      <!-- main title holder -->
+      <div class="titleHolder">
+        <h1>Products List</h1>
+      </div>
+      <!-- todo list -->
+      <div class="todoList">
+        <!-- list holder -->
+        <div class="listHolder">
+            <span class="listName">Items</span>
+            <div class="b">Qty</div><br><br>
+          <ul class="list">
+           
+            <li>
+              <span class="listName">Masks  &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp; &emsp; 75</span>
+              <!-- 
+              <button class="btn-icon remove"></button>
+              <button class="btn-icon down"></button>
+              <button class="btn-icon up"></button>
+              -->
+            </li>
+            <li>
+              <span class="listName">Sanitizers &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp; 10</span>
+              
+            </li>
+            <li>
+              <span class="listName">Gloves  &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp; &emsp; 30</span>
+            </li>
+            <li>
+              <span class="listName">Oxygen cylinders  &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp; &emsp; &emsp;&emsp;&emsp;  8 </span>
+            </li>
+        
+          </ul>
+        </div>
+        <!-- form holder -->
+        <div class="formHolder">
+          <div class="col big">
+            <input type="text" id="addInput">
+            <input type="text" id="addInput">
+          </div>
+          <div class="col">
+            <button type="button" id="addBtn" class="btn-primary">Add Item</button>
+          </div>
+          <div class="col">
+            <button type="button" id="toggleBtn" class="btn-primary">Hide List</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- importing custom js -->
+  <script src="static/js/maiin.js"></script>
+
+
+{% endblock %}
